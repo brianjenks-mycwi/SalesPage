@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Game Site</title>
+	<meta CHARSET="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/jquery-ui.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    
+<!--    Have this file for my form javascript-->
+    <script src="js/form.js"></script>
+</head>
+
+<body>
+	
+	<header>
+		<a href="index.html"><img src="images/gamebanner.jpg" alt="Game Site Banner"></a>
+	</header>
+	
+	<div class="container">
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="story.html">Story</a></li>
+			<li><a href="characters.html">Characters</a></li>
+			<li><a href="buy.html" class="active">Purchase</a></li>
+		</ul>
+	</nav>
+	
+
+	
+	<main>
+		<div id="contactForm">
+		<br><h3>Input your information below, and we will send you information about our product.</h3>
+		<form>
+			<label for="fName">First Name:</label>
+			<input type="text" name="fName" id="fName">
+			
+			<label for="lName">Last Name:</label>
+			<input type="text" name="lName" id="lName">
+			
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email">
+			
+			<label for="phone">Phone:</label>
+			<input type="tel" id="phone" name="phone">
+			
+			<label for="arrivalDate">Preferred arrival date:</label>
+            <input type="text" id="arrivalDate">
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+            
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state">
+            
+            <div id="resetSubmit" class="floatRight">
+                <button type="reset" id="reset">Reset Form</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+			
+		</form>
+		
+		</div><!--end contactForm-->
+	</main>
+	</div><!--end container-->
+	
+
+</body>
+
+</html>

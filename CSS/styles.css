@@ -1,0 +1,228 @@
+header {
+	background-color: black;
+	width: 100%;
+	height: 120px;
+}
+
+/* The image maintains aspect ratio, but covers the background*/
+body {
+	background-image: url(../images/gamingbackground.jpg);
+	background-attachment: fixed; /* Ch 8, pg. 242*/
+	background-size: cover; /* Make the image completely cover the page- Ch 8, pg 246*/
+}
+
+/* Stretch image to cover entire top */
+header img {
+	height: 120px;
+	width: 100%;
+}
+
+/* Nav is a sidebar that stops scrolling at the top of the screen*/
+nav {
+	background-color: rgba(0,0,0,.7);
+	float: left;
+	width: 15%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+}
+
+nav ul {
+	padding-left: 0;
+	text-align: center;
+	list-style-type: none;
+}
+
+/* Style links as transparent black, with white text */
+nav a {
+	font-size: 1.5em;
+	display: block;
+	color: white;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 2px 0 0 0;
+	border-color: rgba(0,0,0,.8);
+}
+
+/* Color the links when hovered over, make the text look bigger
+ * Ch 9, pg. 289*/
+nav a:hover {
+	color: rgb(210,210,210);
+	background-color: rgba(0,0,0,.8);
+	font-weight: bold;
+	animation: glow 3s infinite;
+}
+
+@keyframes glow {
+	0% {
+		text-shadow: 0 0 10px red;
+	}
+	
+	15% {
+		text-shadow: 2px 2px 10px rgba(255,255,255,1),
+					-2px -2px 10px rgba(255,255,255,1);
+	}
+	
+	30% {
+		text-shadow: 2px 2px 4px rgba(255,255,255,.7),
+					-2px -2px 4px rgba(255,255,255,.7);
+	}
+	
+	50% {
+		text-shadow: 20px 20px 50px rgba(255,255,255,.5),
+					-20px -20px 50px rgba(255,255,255,.5);
+	}
+}
+
+/* Change the color of the current page's link, stop the hover from happening
+ * Ch 9, pg. 313... altered a little*/
+nav a.active {
+	background-color: rgba(0,0,100,.7);
+	font-weight: normal;
+	color: white;
+}
+
+/* Make the content of the page visible, and still have a cool transparent effect*/
+main {
+	background-color: rgba(223,240,248,.95); /* Color picked from the banner image*/
+	width: 70%;
+	margin: 0;
+	padding-bottom: 5px;
+    overflow: hidden;
+}
+
+/* Give our paragraphs space! Make sure the words in the articles aren't cut off by the border*/
+main p {
+	padding: 5px;
+}
+
+p {
+	font-family: Georgia, "Times New Roman", Times, serif; /* Ch 6, pg. 124*/
+}
+
+/* Separate the articles, and put a cool border around it*/
+main article {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0 1em 0 1em;
+	margin: 0 1% 0 1%;
+}
+
+/* #update is a right sidebar that sticks to the top of the screen*/
+#update {
+	background-color: rgba(255,255,255,.7);
+	color: #002222;
+	float: right;
+	width: 15%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	padding-bottom: 5px; /* Associated with #update article*/
+}
+
+
+#update article {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 1em 0 1em 0; /* Create rounded corners on top-left and bottom-right Ch 7, pg. 199*/
+	padding: 5px;
+	margin: 5px 1% 0 1%; /* Associated with #update padding-bottom*/
+		
+}
+
+h2 {
+	padding: .5em 0 0 .5em;
+	font-size: 1.3em;
+	font-family: Verdana, Arial, Helvetica, sans-serif; /* Ch 6, pg. 125*/
+}
+
+
+
+h3 {
+	font-size: 1.1em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#contactForm h3 {
+	text-align: center;
+}
+
+label {
+	margin: .7em 0 0 1em;
+	display: inline-block;
+	width: 15em;
+}
+
+input {
+	display: block;
+	margin-left: 1em;
+}
+
+select {
+	display: block;
+	margin-left: 1em;
+}
+
+textarea {
+	margin: .5em 0 0 1em;
+	display: block;
+	width: 40em;
+	height: 5em;
+	max-width: 95%;
+}
+
+input[type="submit"], input[type="reset"]{
+	display: inline-block;
+	margin-top: 1em;
+}
+
+input[name="lName"] {
+	width: 15em;
+}
+
+input[name="fName"], input[name="phone"] {
+	width: 10em;
+}
+
+input[name="email"], input[name="address"] {
+	width: 20em;
+}
+
+/* Format the h2 to look like a tab, and make text unselectable */
+h2.sortHeader {
+    display: inline-block;
+    border: 1px solid #c5dbec;
+    border-radius: 1em 1em 0 0;
+    background: #dfeffc url(images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
+    margin: .25em 0 0 1%;
+    padding: .5em 1em .2em 1em;
+    
+    /* Eliminate the ability to highlight this section */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.interactable {
+    color: #2e6e9e;
+}
+
+/* Show the pointer when above these items */
+.interactable:hover {
+    cursor: pointer;
+    color: #1d5987;
+}
+
+/* Move away from the right, add space up above */
+#resetSubmit {
+    margin-top: 5em;
+    margin-right: 1em;
+}
+
+/* All items given this class float right */
+.floatRight {
+    float: right;
+}
